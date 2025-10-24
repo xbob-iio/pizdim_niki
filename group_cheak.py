@@ -14,7 +14,6 @@ async def main():
     await client.start()
     print("✅ Авторизация прошла")
 
-    # Получаем список диалогов (чаты, группы и т.д.)
     dialogs = await client.get_dialogs()
 
     print("\n📋 Список чатов:")
@@ -23,7 +22,6 @@ async def main():
     for i, chat in enumerate(group_dialogs):
         print(f"{i + 1}. {chat.name} (ID: {chat.id})")
 
-    # Спрашиваем пользователя, в какую группу зайти
     index = int(input("\n🔢 Введите номер группы: ")) - 1
     if index < 0 or index >= len(group_dialogs):
         print("❌ Неверный номер.")
@@ -53,4 +51,5 @@ async def main():
 
 with client:
     client.loop.run_until_complete(main())
+
 
