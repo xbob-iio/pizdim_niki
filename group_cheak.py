@@ -4,8 +4,8 @@ from telethon.tl.types import InputPeerEmpty
 import os
 
 # 🔐 Твои данные
-api_id = 24592846  # <-- API ID
-api_hash = 'ebefe313af37274f78ae2b43e4d25913'  # <-- API HASH
+api_id =   # <-- API ID
+api_hash = ''  # <-- API HASH
 session_name = 'my_session'
 
 client = TelegramClient(session_name, api_id, api_hash)
@@ -53,3 +53,4 @@ async def main():
 
 with client:
     client.loop.run_until_complete(main())
+
